@@ -2,67 +2,86 @@
 
 ## Introduction
 
-Consistent and descriptive commit messages are essential for maintaining a clean and organized version history. This guide will provide you with guidelines for writing meaningful commit messages that follow our team's conventions.
+Consistent and descriptive commit messages are essential for maintaining a clean and organized version history. This guide will provide you with guidelines for writing meaningful commit messages that follow the Conventional Commits specification.
 
 ## Commit Message Format
 
-Each commit message should consist of a header, an optional body, and an optional footer. The header has a specific format that includes a type, an optional scope, and a brief description.
+Each commit message should follow the format:
 
 ```xml
 <type>(<scope>): <description>
 <BLANK LINE>
 [optional body]
 <BLANK LINE>
-[optional footer]
+[optional footer(s)]
 ```
 
-## Header
+The commit message contains the following structural elements to communicate intent to consumers of your library:
 
-The header includes a type, an optional scope, and a brief description.
+- **Type**: The type indicates the purpose of the commit and helps categorize the changes. Here are some commonly used types:
 
-### Type
+  - **feat**: Introduces a new feature to the codebase.
+  - **fix**: Fixes a bug in the codebase.
+  - **chore**: Performs maintenance tasks or other changes not related to code.
+  - **docs**: Updates documentation.
+  - **style**: Makes code style changes, such as formatting or indentation.
+  - **refactor**: Applies code changes that do not affect behavior or functionality.
+  - **perf**: Implements performance improvements.
+  - **test**: Adds or modifies tests.
+  - **ci**: Makes changes to the continuous integration configuration.
 
-The type indicates the purpose of the commit. It helps categorize the changes and provides a quick summary. Some commonly used types are:
+- **Scope** (optional): The scope provides additional contextual information about the commit. It represents the module, component, or section of the codebase related to the changes. For example, you can have a scope like "(parser)" or "(validation)".
 
-- feat: A new feature or enhancement.
-- fix: A bug fix.
-- docs: Documentation changes.
-- style: Code style changes (e.g., formatting, indentation).
-- refactor: Code changes that do not affect the behavior or functionality.
-- test: Adding or modifying tests.
-- chore: Other changes not related to code (e.g., build tasks, dependencies).
+- **Description**: The description is a concise summary of the changes introduced by the commit. It should be clear, meaningful, and written in the imperative mood. For example, "Add ability to parse arrays" or "Fix email validation regex".
 
-### Scope
+- **Body** (optional): The body provides more detailed information about the changes made in the commit. It can include the motivation behind the changes, additional context, and any relevant details. The body should start one blank line after the description and can consist of multiple paragraphs. You can use the body to explain the reasoning behind a specific implementation choice, provide examples, or describe any notable considerations.
 
-The scope is optional and represents the module, component, or section of the codebase related to the commit. It provides additional context and helps narrow down the focus of the changes.
-
-### Description
-
-The description provides a concise summary of the changes introduced by the commit. It should be clear and meaningful.
-
-## Body (Optional)
-
-The body provides more detailed information about the changes made in the commit. It can include the motivation behind the changes, additional context, and any relevant details.
-
-## Footer (Optional)
-
-The footer is used to reference issues or provide other related information. For example, it can include a reference to a GitHub issue or a breaking change notice.
+- **Footer** (optional): The footer is used to reference issues or provide other related information. It can include breaking changes, references to GitHub issues, or any other relevant information. For example, you can include a footer like "BREAKING CHANGE: The `sendEmail` function signature has changed" to indicate a breaking change.
 
 ## Examples
 
-Here are a few examples of well-formed commit messages:
+Here are some examples of well-formed commit messages:
 
-- feat(user): Add login functionality
-  - Adds the login feature for the user module.
-- fix(validation): Fix email validation regex
-  - Fixes the regular expression used for email validation in the validation module.
-- docs(readme): Update installation instructions
-  - Updates the installation instructions in the README file.
-- chore(dependencies): Update package dependencies
-  - Updates the project's package dependencies.
+```
+feat(parser): Add ability to parse arrays
+```
+
+```
+fix(validation): Fix email validation regex
+```
+
+```
+docs(readme): Update installation instructions
+```
+
+```
+chore(dependencies): Update package dependencies
+```
+
+```
+test(api): Add unit tests for the API module
+```
+
+```
+refactor: Simplify the configuration code
+```
+
+For commits that introduce breaking changes, you can use the following format:
+
+```
+feat!: Send an email to the customer when a product is shipped
+
+BREAKING CHANGE: The `sendEmail` function signature has changed.
+```
+
+```
+fix(validation)!: Update validation logic for email input
+
+BREAKING CHANGE: The validateEmail function has been removed. Please use the new validateInput function with the email validation type instead.
+```
 
 ## Conclusion
 
-By following these commit message guidelines, we can ensure that our version history remains organized and easy to understand. Consistent commit messages improve collaboration and help in maintaining a clean and transparent development process. If you have any questions or need assistance, feel free to reach out to the team.
+By following these commit message guidelines based on the Conventional Commits specification, you can ensure that your version history remains organized and easy to understand. Consistent commit messages improve collaboration and help in maintaining a clean and transparent development process. If you have any questions or need assistance, feel free to reach out to the team.
 
 Happy committing!
