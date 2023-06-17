@@ -31,8 +31,10 @@ The type indicates the purpose of the commit. It helps categorize the changes an
 - refactor: Code changes that do not affect the behavior or functionality.
 - test: Adding or modifying tests.
 - chore: Other changes not related to code (e.g., build tasks, dependencies).
-- Scope
-- The scope is optional and represents the module, component, or section of the codebase related to the commit. It provides additional context and helps narrow down the focus of the changes.
+
+### Scope
+
+The scope is optional and represents the module, component, or section of the codebase related to the commit. It provides additional context and helps narrow down the focus of the changes.
 
 ### Description
 
