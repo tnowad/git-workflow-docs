@@ -26,7 +26,6 @@ fix(api): Handle null response in data fetching
 
 ```
 docs(readme): Update installation instructions
-
 ```
 
 ```
@@ -67,7 +66,6 @@ test(api): Update integration tests for new API endpoints
 
 ```
 chore(dependencies): Update package dependencies
-
 ```
 
 ```
